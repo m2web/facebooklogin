@@ -1,9 +1,9 @@
 Accounts.loginServiceConfiguration.remove({
-		service: "github"
+		service: "facebook"
 });
 
 Accounts.loginServiceConfiguration.insert({
-		service: "github",
-		clientId: Meteor.settings.githubClientID,
-		secret: Meteor.settings.githubSecret
+		service: "facebook",
+		appId: Meteor.settings.facebookAppId,
+		secret: Meteor.settings.facebookSecret
 });
