@@ -26,3 +26,14 @@ Template.user_loggedin.events({
 		});
 	}
 });
+
+Template.user_loggedin.events({
+	"click #accountSettings": function(e, tmpl) {
+		var userAcct = Meteor.user();
+		var result = "Name: " + userAcct.services.facebook.name;
+		result += "\n Gender: " + userAcct.services.facebook.gender;
+		result += "\n ID: " + userAcct.services.facebook.id;
+		result += "\n User Name: " + userAcct.services.facebook.username;
+		alert(result);
+	}
+});
